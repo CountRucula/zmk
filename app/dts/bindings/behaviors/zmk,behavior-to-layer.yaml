@@ -6,3 +6,7 @@ description: To Layer
 compatible: "zmk,behavior-to-layer"
 
 include: one_param.yaml
+
+properties:
+  ignore-layers:
+    type: array

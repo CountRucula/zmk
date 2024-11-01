@@ -1,0 +1,23 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <dt-bindings/zmk/behaviors.h>
+
+/ {
+	behaviors {
+#if ZMK_BEHAVIOR_OMIT(MWH)
+		/omit-if-no-ref/ 
+#endif
+		mwh: behavior_mouse_scroll {
+			compatible = "zmk,behavior-mouse-scroll";
+			display-name = "Mouse Scroll";
+			#binding-cells = <1>;
+			delay-ms = <0>;
+			time-to-max-speed-ms = <300>;
+			acceleration-exponent = <0>;
+		};
+	};
+};

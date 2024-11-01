@@ -76,7 +76,7 @@ static struct hids_report mouse_input = {
     .type = HIDS_INPUT,
 };
 
-#endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
+#endif
 
 static bool host_requests_notification = false;
 static uint8_t ctrl_point;
@@ -150,7 +150,7 @@ static ssize_t read_hids_mouse_input_report(struct bt_conn *conn, const struct b
     return bt_gatt_attr_read(conn, attr, buf, len, offset, report_body,
                              sizeof(struct zmk_hid_mouse_report_body));
 }
-#endif // IS_ENABLED(CONFIG_ZMK_MOUSE)
+#endif
 
 // static ssize_t write_proto_mode(struct bt_conn *conn,
 //                                 const struct bt_gatt_attr *attr,
