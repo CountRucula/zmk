@@ -1,8 +1,11 @@
 {
   "files.associations": {
     "*.overlay": "dts",
-    "*.keymap": "dts"
-  },
+    "*.keymap": "dts",
+    "core.h": "c",
+    "pb_encode.h": "c",
+    "keymap.h": "c"
+},
   "python.analysis.include": ["app/scripts", "zephyr/scripts"],
   "[c]": {
     "editor.formatOnSave": true
